@@ -72,65 +72,139 @@
     <div class="container container-xl">
       <h2 class="section-title">Our Team Members</h2>
       
-      <div class="grid grid-cols-4 gap-lg">
-        <article class="card profile-card">
-          <img src="assets/img/placeholder-avatar.jpg" alt="Team Member">
-          <h5 class="profile-name">Michael Chen</h5>
-          <p class="profile-role">Senior Developer</p>
-          <p class="profile-bio">Full-stack developer specializing in modern web technologies.</p>
-        </article>
-        
-        <article class="card profile-card">
-          <img src="assets/img/placeholder-avatar.jpg" alt="Team Member">
-          <h5 class="profile-name">Emily Rodriguez</h5>
-          <p class="profile-role">UX Designer</p>
-          <p class="profile-bio">Creating intuitive and beautiful user experiences.</p>
-        </article>
-        
-        <article class="card profile-card">
-          <img src="assets/img/placeholder-avatar.jpg" alt="Team Member">
-          <h5 class="profile-name">David Kim</h5>
-          <p class="profile-role">Product Manager</p>
-          <p class="profile-bio">Bridging the gap between users and technical teams.</p>
-        </article>
-        
-        <article class="card profile-card">
-          <img src="assets/img/placeholder-avatar.jpg" alt="Team Member">
-          <h5 class="profile-name">Lisa Anderson</h5>
-          <p class="profile-role">Marketing Lead</p>
-          <p class="profile-bio">Crafting compelling stories and building brand awareness.</p>
-        </article>
-        
-        <article class="card profile-card">
-          <img src="assets/img/placeholder-avatar.jpg" alt="Team Member">
-          <h5 class="profile-name">James Wilson</h5>
-          <p class="profile-role">DevOps Engineer</p>
-          <p class="profile-bio">Ensuring smooth deployments and reliable infrastructure.</p>
-        </article>
-        
-        <article class="card profile-card">
-          <img src="assets/img/placeholder-avatar.jpg" alt="Team Member">
-          <h5 class="profile-name">Maria Garcia</h5>
-          <p class="profile-role">Data Analyst</p>
-          <p class="profile-bio">Turning data into actionable insights and strategies.</p>
-        </article>
-        
-        <article class="card profile-card">
-          <img src="assets/img/placeholder-avatar.jpg" alt="Team Member">
-          <h5 class="profile-name">Alex Thompson</h5>
-          <p class="profile-role">Frontend Developer</p>
-          <p class="profile-bio">Building responsive and accessible web interfaces.</p>
-        </article>
-        
-        <article class="card profile-card">
-          <img src="assets/img/placeholder-avatar.jpg" alt="Team Member">
-          <h5 class="profile-name">Rachel Lee</h5>
-          <p class="profile-role">QA Engineer</p>
-          <p class="profile-bio">Ensuring quality and reliability in every release.</p>
-        </article>
+      <!-- Filters and Search -->
+      <div class="team-filters-section">
+        <div class="filters-container">
+          <div class="filter-group">
+            <label for="search-input" class="filter-label">Search</label>
+            <input 
+              type="text" 
+              id="search-input" 
+              class="search-input" 
+              placeholder="Search by name, role, or bio..."
+              aria-label="Search team members"
+            >
+          </div>
+
+          <div class="filter-group">
+            <label for="department-filter" class="filter-label">Department</label>
+            <select 
+              id="department-filter" 
+              class="filter-select"
+              aria-label="Filter by department"
+            >
+              <option value="">All Departments</option>
+              <!-- Options populated by JavaScript -->
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="location-filter" class="filter-label">Location</label>
+            <select 
+              id="location-filter" 
+              class="filter-select"
+              aria-label="Filter by location"
+            >
+              <option value="">All Locations</option>
+              <!-- Options populated by JavaScript -->
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <button 
+              id="reset-filters-btn" 
+              class="btn btn-outline"
+              aria-label="Reset all filters"
+            >
+              Reset Filters
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Members Grid -->
+      <div class="grid grid-cols-4 gap-lg" id="team-members-container">
+        <!-- Dynamically populated by JavaScript -->
       </div>
     </div>
   </section>
+
+  <!-- Member Modal -->
+  <div 
+    id="member-modal" 
+    class="modal" 
+    aria-hidden="true" 
+    role="dialog" 
+    aria-labelledby="modal-member-name"
+  >
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-member-name" class="modal-title">Team Member</h2>
+        <button 
+          id="modal-close-btn" 
+          class="modal-close-btn" 
+          aria-label="Close modal"
+          type="button"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="member-profile-section">
+          <img 
+            id="modal-member-image" 
+            src="assets/img/placeholder-avatar.jpg" 
+            alt="" 
+            class="member-profile-image"
+          >
+          <div class="member-profile-info">
+            <p id="modal-member-role" class="member-role"></p>
+            <p id="modal-member-bio" class="member-bio"></p>
+            
+            <div id="modal-member-badges" class="member-badges">
+              <!-- Populated by JavaScript -->
+            </div>
+
+            <!-- Contact Information - Placeholder for real data -->
+            <div class="member-contact">
+              <h4>Contact Information</h4>
+              <p>
+                <strong>Email:</strong> 
+                <a id="modal-member-email" href="#">contact@company.com</a>
+              </p>
+              <p>
+                <strong>Phone:</strong> 
+                <a id="modal-member-phone" href="#">+1-555-0000</a>
+              </p>
+            </div>
+
+            <!-- Social Links - Placeholder for real data -->
+            <div class="member-social-section">
+              <h4>Connect</h4>
+              <div id="modal-member-social" class="social-links">
+                <!-- Populated by JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievements Carousel - Placeholder for real data -->
+        <div class="achievements-section">
+          <h4>Achievements</h4>
+          <div class="carousel-container">
+            <div id="achievements-carousel" class="carousel">
+              <!-- Populated by JavaScript -->
+            </div>
+            <div id="carousel-dots" class="carousel-dots">
+              <!-- Populated by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Join Team CTA Section -->
   <section class="section" id="join-team" style="background-color: var(--color-neutral-50);">
@@ -157,5 +231,6 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/team-profiles.js"></script>
 </body>
 </html>
