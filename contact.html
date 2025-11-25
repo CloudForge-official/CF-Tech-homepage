@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with us - We'd love to hear from you and discuss how we can help">
+  <title>Contact Us - Company Name</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">Company Name</a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="team.html" class="nav-link">Team</a>
+        <a href="culture.html" class="nav-link">Culture</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container container-xl">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you. Let's start a conversation about how we can work together.</p>
+    </div>
+  </section>
+
+  <!-- Contact Introduction Section -->
+  <section class="section" id="contact-intro">
+    <div class="container container-xl">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-subtitle">Whether you have a question, want to discuss a project, or are interested in joining our team, we're here to help. Reach out and let's connect.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form and Info Section -->
+  <section class="section" id="contact-main" style="background-color: var(--color-neutral-50);">
+    <div class="container container-xl">
+      <div class="grid grid-cols-2 gap-2xl">
+        <!-- Contact Form -->
+        <article class="card">
+          <h3 class="card-title">Send us a Message</h3>
+          <form id="contact-form" style="margin-top: var(--spacing-lg);">
+            <div style="margin-bottom: var(--spacing-lg);">
+              <label for="name" style="display: block; margin-bottom: var(--spacing-xs); font-weight: var(--font-weight-medium);">Full Name *</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                style="width: 100%; padding: var(--spacing-md); border: 1px solid var(--color-neutral-300); border-radius: var(--radius-md); font-size: var(--font-size-base);"
+                placeholder="John Doe"
+              >
+            </div>
+            
+            <div style="margin-bottom: var(--spacing-lg);">
+              <label for="email" style="display: block; margin-bottom: var(--spacing-xs); font-weight: var(--font-weight-medium);">Email Address *</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                style="width: 100%; padding: var(--spacing-md); border: 1px solid var(--color-neutral-300); border-radius: var(--radius-md); font-size: var(--font-size-base);"
+                placeholder="john@example.com"
+              >
+            </div>
+            
+            <div style="margin-bottom: var(--spacing-lg);">
+              <label for="subject" style="display: block; margin-bottom: var(--spacing-xs); font-weight: var(--font-weight-medium);">Subject *</label>
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                required 
+                style="width: 100%; padding: var(--spacing-md); border: 1px solid var(--color-neutral-300); border-radius: var(--radius-md); font-size: var(--font-size-base);"
+                placeholder="How can we help?"
+              >
+            </div>
+            
+            <div style="margin-bottom: var(--spacing-lg);">
+              <label for="message" style="display: block; margin-bottom: var(--spacing-xs); font-weight: var(--font-weight-medium);">Message *</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                required 
+                rows="6"
+                style="width: 100%; padding: var(--spacing-md); border: 1px solid var(--color-neutral-300); border-radius: var(--radius-md); font-size: var(--font-size-base); resize: vertical;"
+                placeholder="Tell us about your project or inquiry..."
+              ></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" data-cta="contact-form-submit">Send Message</button>
+          </form>
+        </article>
+        
+        <!-- Contact Information -->
+        <article>
+          <div class="card" style="margin-bottom: var(--spacing-xl);">
+            <h4 class="card-title">Contact Information</h4>
+            <div style="margin-top: var(--spacing-lg);">
+              <div style="margin-bottom: var(--spacing-lg);">
+                <h5 style="font-weight: var(--font-weight-semibold); margin-bottom: var(--spacing-xs);">Email</h5>
+                <p class="card-text">contact@companyname.com</p>
+              </div>
+              
+              <div style="margin-bottom: var(--spacing-lg);">
+                <h5 style="font-weight: var(--font-weight-semibold); margin-bottom: var(--spacing-xs);">Phone</h5>
+                <p class="card-text">+1 (555) 123-4567</p>
+              </div>
+              
+              <div style="margin-bottom: var(--spacing-lg);">
+                <h5 style="font-weight: var(--font-weight-semibold); margin-bottom: var(--spacing-xs);">Address</h5>
+                <p class="card-text">
+                  123 Business Street<br>
+                  Suite 100<br>
+                  City, State 12345
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <h4 class="card-title">Office Hours</h4>
+            <div style="margin-top: var(--spacing-lg);">
+              <p class="card-text">
+                <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM<br>
+                <strong>Saturday:</strong> 10:00 AM - 4:00 PM<br>
+                <strong>Sunday:</strong> Closed
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Preview/Reasons Section -->
+  <section class="section" id="contact-reasons">
+    <div class="container container-xl">
+      <h2 class="section-title">Why Work With Us?</h2>
+      
+      <div class="grid grid-cols-3 gap-xl">
+        <article class="card">
+          <h4 class="card-title">Expert Team</h4>
+          <p class="card-text">Our experienced professionals bring deep expertise and innovative thinking to every project.</p>
+        </article>
+        
+        <article class="card">
+          <h4 class="card-title">Proven Results</h4>
+          <p class="card-text">We have a track record of delivering successful projects that exceed expectations.</p>
+        </article>
+        
+        <article class="card">
+          <h4 class="card-title">Client-Focused</h4>
+          <p class="card-text">Your success is our priority. We work closely with you to understand and achieve your goals.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" id="contact-cta" style="background-color: var(--color-neutral-50);">
+    <div class="container container-xl text-center">
+      <h2 class="section-title">Ready to Get Started?</h2>
+      <p class="section-subtitle">Let's discuss your project and explore how we can help you achieve your goals. We're excited to hear from you!</p>
+      <div class="flex justify-center gap-md">
+        <a href="#contact-form" class="btn btn-primary" data-cta="scroll-to-form">Send a Message</a>
+        <a href="team.html" class="btn btn-outline" data-cta="view-team">Meet the Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="contact-faq">
+    <div class="container container-lg">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      
+      <div style="max-width: 800px; margin: 0 auto;">
+        <article class="card" style="margin-bottom: var(--spacing-lg);">
+          <h4 class="card-title">What types of projects do you work on?</h4>
+          <p class="card-text">We work on a wide variety of projects across different industries. Our team has experience with web development, mobile apps, enterprise solutions, and more. Contact us to discuss your specific needs.</p>
+        </article>
+        
+        <article class="card" style="margin-bottom: var(--spacing-lg);">
+          <h4 class="card-title">How long does it take to get a response?</h4>
+          <p class="card-text">We typically respond to all inquiries within 24 hours during business days. For urgent matters, please call our office directly.</p>
+        </article>
+        
+        <article class="card" style="margin-bottom: var(--spacing-lg);">
+          <h4 class="card-title">Do you offer consultations?</h4>
+          <p class="card-text">Yes! We offer free initial consultations to discuss your project, understand your needs, and explore how we can help. Schedule a call through our contact form.</p>
+        </article>
+        
+        <article class="card">
+          <h4 class="card-title">Are you hiring?</h4>
+          <p class="card-text">We're always interested in connecting with talented individuals. Check out our Culture page to learn more about what it's like to work here, and reach out if you'd like to join our team.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <nav class="footer-links">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="team.html" class="footer-link">Team</a>
+        <a href="culture.html" class="footer-link">Culture</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </nav>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Company Name. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
